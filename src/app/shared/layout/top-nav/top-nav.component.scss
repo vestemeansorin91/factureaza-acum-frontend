@@ -1,0 +1,28 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+// background-color: #e2f3f5;
+  .left-container {
+    display: flex;
+    justify-content: flex-start;
+
+    img {
+      height: 50px;
+    }
+  }
+
+  .settings {
+    min-width: 10px;
+    padding: 0 4px;
+    margin-right: 16px;
+  }
+}
+
+:host {
+  mat-toolbar {
+    @media screen and (max-width: 720px) {
+      padding: 0;
+    }
+  }
+}

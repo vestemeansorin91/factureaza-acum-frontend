@@ -1,0 +1,26 @@
+<mat-toolbar class="navbar">
+  <div class="left-container">
+    <button
+      *ngIf="isScreenSmall()"
+      class="sidenav-toggle"
+      mat-button
+      (click)="toggleSidenav.emit()"
+    >
+    </button>
+
+  </div>
+  <div>
+    <button class="settings" mat-button>
+    </button>
+    <button class="settings" mat-button>
+    </button>
+    <button class="settings" mat-button [matMenuTriggerFor]="menu">
+      <span>setari</span>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button class="settings-item" mat-menu-item (click)="logout()">
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>

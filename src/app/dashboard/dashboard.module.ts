@@ -1,3 +1,4 @@
+import { SharedModule } from './../shared/shared.module';
 import { DashboardRoutesModule } from './dashboard.routes';
 import { NgModule } from '@angular/core';
 import { HomeComponent } from './pages/home/home.component';
@@ -11,6 +12,7 @@ import { DashboardComponent } from './dashboard.component';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     DashboardRoutesModule
   ],
 })

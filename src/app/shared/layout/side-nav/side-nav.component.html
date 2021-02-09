@@ -1,0 +1,30 @@
+<mat-sidenav-container class="app-sidenav-container">
+  <mat-sidenav
+    class="app-sidenav mat-elevation-z10"
+    [opened]="!isScreenSmall()"
+    [mode]="isScreenSmall() ? 'push' : 'side'"
+    #sidenav
+  >
+    <mat-toolbar routerLink="dashboard/page">
+      <img
+        routerLink="dashboard"
+        src="/assets/bill.svg"
+        alt="logo"
+        class="logo"
+      />
+    </mat-toolbar>
+
+    <mat-nav-list >
+      <a mat-list-item *ngFor="let link of links">
+        {{ link.name }}
+      </a>
+    </mat-nav-list>
+    <!-- <span class="app-version">Versiune aplicatie {{ appVersion }} </span> -->
+  </mat-sidenav>
+  <div class="app-sidenav-content">
+    <app-top-nav (toggleSidenav)="sidenav.toggle()"></app-top-nav>
+    <div class="wrapper">
+      <!-- <router-outlet></router-outlet> -->
+    </div>
+  </div>
+</mat-sidenav-container>
